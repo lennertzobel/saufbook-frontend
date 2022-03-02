@@ -1,0 +1,29 @@
+<section class="space-y-6 p-6">
+  <h1 class="text-5">saufbook</h1>
+  <p class="text-7">Hallo Tim</p>
+  <a routerLink="/" class="flex space-x-4 rounded-lg bg-white p-6">
+    <div class="h-16 w-16 flex-none rounded-full bg-gray-400"></div>
+    <div class="overflow-hidden">
+      <div class="truncate text-7">27,66&nbsp;EUR</div>
+      <div class="truncate text-3.5">Offener Betrag</div>
+    </div>
+  </a>
+</section>
+
+<section *ngIf="products" class="mb-6 overflow-hidden bg-white p-6">
+  <h2 class="mb-4">Jetzt aufschreiben</h2>
+  <div class="-mx-6 -my-0.5 flex overflow-x-auto py-0.5">
+    <a
+      routerLink="/"
+      class="mx-2 flex flex-col text-center first:ml-6 last:mr-6"
+      *ngFor="let product of products"
+    >
+      <div class="mb-2 h-16 w-16 rounded-full bg-gray-400"></div>
+      <div class="inline-block w-16 text-3.5 leading-tight">
+        {{ product.name }}
+      </div>
+    </a>
+  </div>
+</section>
+
+<app-navigation></app-navigation>
