@@ -1,15 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'navigation-link',
   templateUrl: './navigation-link.component.html',
-  styles: [],
 })
-export class NavigationLinkComponent implements OnInit {
+export class NavigationLinkComponent {
   @Input() url = '/';
   @Input() options = { exact: false };
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }

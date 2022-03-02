@@ -1,11 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',
-  styles: [],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   products = [
     {
       name: 'Kleines Bier',
@@ -28,8 +27,4 @@ export class HomeComponent implements OnInit {
       image: 'https://cdn-icons-png.flaticon.com/128/1237/1237004.png',
     },
   ];
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }
