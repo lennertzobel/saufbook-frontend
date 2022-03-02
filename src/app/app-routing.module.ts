@@ -4,12 +4,19 @@ import { HomeComponent } from './templates/home/home.component';
 import { ArchiveComponent } from './templates/archive/archive.component';
 import { SettingsComponent } from './templates/settings/settings.component';
 import { NotFoundComponent } from './templates/not-found/not-found.component';
+import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'archive', component: ArchiveComponent },
-  { path: 'settings', component: SettingsComponent },
-  { path: '**', component: NotFoundComponent },
+  {
+    path: '',
+    component: MainLayoutComponent,
+    children: [
+      { path: '', component: HomeComponent },
+      { path: 'archive', component: ArchiveComponent },
+      { path: 'settings', component: SettingsComponent },
+      { path: '**', component: NotFoundComponent },
+    ],
+  },
 ];
 
 @NgModule({

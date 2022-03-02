@@ -10,6 +10,7 @@ import { SettingsComponent } from './templates/settings/settings.component';
 import { NavigationLinkComponent } from './template-parts/navigation/navigation-link/navigation-link.component';
 import { NotFoundComponent } from './templates/not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     SettingsComponent,
     NavigationLinkComponent,
     NotFoundComponent,
+    MainLayoutComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
