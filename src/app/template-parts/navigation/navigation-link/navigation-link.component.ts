@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-navigation-link',
+  selector: 'navigation-link',
   templateUrl: './navigation-link.component.html',
   styles: [],
 })
